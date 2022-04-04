@@ -1,0 +1,3559 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`modules/platform/tgit/index addAssignees(issueNo, assignees) should add the given assignee to the issue 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/users/someuser",
+  },
+  Object {
+    "body": Object {},
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "2",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "PUT",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/42",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index addAssignees(issueNo, assignees) should add the given assignees to the issue 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/users/someuser",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/users/someotheruser",
+  },
+  Object {
+    "body": Object {},
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "2",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "PUT",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/42",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index addAssignees(issueNo, assignees) should swallow error 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/users/someuser",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index createPr(branchName, title, body) adds approval rule to ignore all approvals 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "body": Object {
+      "description": "the-body",
+      "labels": "",
+      "source_branch": "some-branch",
+      "target_branch": "master",
+      "title": "some-title",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "114",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "POST",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_requests",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/1",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/1",
+  },
+  Object {
+    "body": Object {},
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "2",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "PUT",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/1/merge",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index createPr(branchName, title, body) auto-accepts the MR when requested 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "body": Object {
+      "description": "the-body",
+      "labels": "",
+      "source_branch": "some-branch",
+      "target_branch": "master",
+      "title": "some-title",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "114",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "POST",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_requests",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/1",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/1",
+  },
+  Object {
+    "body": Object {},
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "2",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "PUT",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/1/merge",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index createPr(branchName, title, body) does not try to create already existing approval rule 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "body": Object {
+      "description": "the-body",
+      "labels": "",
+      "source_branch": "some-branch",
+      "target_branch": "master",
+      "title": "some-title",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "114",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "POST",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_requests",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/1",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/1",
+  },
+  Object {
+    "body": Object {},
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "2",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "PUT",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/1/merge",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index createPr(branchName, title, body) raises with squash enabled when repository squash option is always 1`] = `
+Object {
+  "displayNumber": "Merge Request #12345",
+  "id": 1,
+  "iid": 12345,
+  "number": 12345,
+  "sourceBranch": "some-branch",
+  "title": "some title",
+}
+`;
+
+exports[`modules/platform/tgit/index createPr(branchName, title, body) raises with squash enabled when repository squash option is always 2`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "body": Object {
+      "description": "the-body",
+      "labels": "",
+      "source_branch": "some-branch",
+      "target_branch": "master",
+      "title": "some-title",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "114",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "POST",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/merge_requests",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index createPr(branchName, title, body) raises with squash enabled when repository squash option is default_on 1`] = `
+Object {
+  "displayNumber": "Merge Request #12345",
+  "id": 1,
+  "iid": 12345,
+  "number": 12345,
+  "sourceBranch": "some-branch",
+  "title": "some title",
+}
+`;
+
+exports[`modules/platform/tgit/index createPr(branchName, title, body) raises with squash enabled when repository squash option is default_on 2`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "body": Object {
+      "description": "the-body",
+      "labels": "",
+      "source_branch": "some-branch",
+      "target_branch": "master",
+      "title": "some-title",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "114",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "POST",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/merge_requests",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index createPr(branchName, title, body) returns the PR 1`] = `
+Object {
+  "displayNumber": "Merge Request #12345",
+  "id": 1,
+  "iid": 12345,
+  "number": 12345,
+  "sourceBranch": "some-branch",
+  "title": "some title",
+}
+`;
+
+exports[`modules/platform/tgit/index createPr(branchName, title, body) returns the PR 2`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "body": Object {
+      "description": "the-body",
+      "labels": "",
+      "source_branch": "some-branch",
+      "target_branch": "master",
+      "title": "some-title",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "114",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "POST",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_requests",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index createPr(branchName, title, body) silently ignores approval rules adding errors 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "body": Object {
+      "description": "the-body",
+      "labels": "",
+      "source_branch": "some-branch",
+      "target_branch": "master",
+      "title": "some-title",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "114",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "POST",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_requests",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/1",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/1",
+  },
+  Object {
+    "body": Object {},
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "2",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "PUT",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/1/merge",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index createPr(branchName, title, body) supports draftPR 1`] = `
+Object {
+  "displayNumber": "Merge Request #12345",
+  "id": 1,
+  "iid": 12345,
+  "number": 12345,
+  "sourceBranch": "some-branch",
+  "title": "WIP: some title",
+}
+`;
+
+exports[`modules/platform/tgit/index createPr(branchName, title, body) supports draftPR 2`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "body": Object {
+      "description": "the-body",
+      "labels": "",
+      "source_branch": "some-branch",
+      "target_branch": "master",
+      "title": "[WIP] some-title",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "120",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "POST",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_requests",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index createPr(branchName, title, body) uses default branch 1`] = `
+Object {
+  "displayNumber": "Merge Request #12345",
+  "id": 1,
+  "iid": 12345,
+  "number": 12345,
+  "sourceBranch": "some-branch",
+  "title": "some title",
+}
+`;
+
+exports[`modules/platform/tgit/index createPr(branchName, title, body) uses default branch 2`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "body": Object {
+      "description": "the-body",
+      "labels": "",
+      "source_branch": "some-branch",
+      "target_branch": "master",
+      "title": "some-title",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "114",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "POST",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_requests",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index deleteLabel(issueNo, label) should delete the label 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/42",
+  },
+  Object {
+    "body": Object {
+      "labels": "foo,renovate",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "25",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "PUT",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/42",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index ensureComment add comment if not found 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/merge_requests/42/notes",
+  },
+  Object {
+    "body": Object {
+      "body": "### some-subject
+
+some
+content",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "44",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "POST",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/merge_requests/42/notes",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index ensureComment add updates comment if necessary 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/merge_requests/42/notes",
+  },
+  Object {
+    "body": Object {
+      "body": "### some-subject
+
+some
+content",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "44",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "PUT",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/merge_requests/42/notes/1234",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index ensureComment handles comment with no description 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/merge_requests/42/notes",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index ensureComment skips comment 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/merge_requests/42/notes",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index ensureCommentRemoval deletes comment by content if found 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/merge_requests/42/notes",
+  },
+  Object {
+    "body": Object {
+      "body": "> deleted",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "20",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "PUT",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/merge_requests/42/notes/1234",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index ensureCommentRemoval deletes comment by topic if found 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/merge_requests/42/notes",
+  },
+  Object {
+    "body": Object {
+      "body": "> deleted",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "20",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "PUT",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/merge_requests/42/notes/1234",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index ensureIssue() creates confidential issue 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/issues?per_page=100&state=opened",
+  },
+  Object {
+    "body": Object {
+      "confidential": true,
+      "description": "new-content",
+      "labels": "",
+      "title": "new-title",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "81",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "POST",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/issues",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index ensureIssue() creates issue 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/issues?per_page=100&state=opened",
+  },
+  Object {
+    "body": Object {
+      "confidential": false,
+      "description": "new-content",
+      "labels": "",
+      "title": "new-title",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "82",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "POST",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/issues",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index ensureIssue() sets issue labels 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/issues?per_page=100&state=opened",
+  },
+  Object {
+    "body": Object {
+      "confidential": false,
+      "description": "new-content",
+      "labels": "Renovate,Maintenance",
+      "title": "new-title",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "102",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "POST",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/issues",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index ensureIssue() skips update if unchanged 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/issues?per_page=100&state=opened",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/issues/2",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index ensureIssue() updates confidential issue 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/issues?per_page=100&state=opened",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/issues/2",
+  },
+  Object {
+    "body": Object {
+      "confidential": true,
+      "description": "newer-content",
+      "labels": "Renovate,Maintenance",
+      "title": "title-2",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "101",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "PUT",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/issues/2",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index ensureIssue() updates issue 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/issues?per_page=100&state=opened",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/issues/2",
+  },
+  Object {
+    "body": Object {
+      "confidential": false,
+      "description": "newer-content",
+      "labels": "",
+      "title": "title-2",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "82",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "PUT",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/issues/2",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index ensureIssue() updates issue with labels 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/issues?per_page=100&state=opened",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/issues/2",
+  },
+  Object {
+    "body": Object {
+      "confidential": false,
+      "description": "newer-content",
+      "labels": "Renovate,Maintenance",
+      "title": "title-2",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "102",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "PUT",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/issues/2",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index ensureIssueClosing() closes issue 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/issues?per_page=100&state=opened",
+  },
+  Object {
+    "body": Object {
+      "state_event": "close",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "23",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "PUT",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/issues/2",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index filterUnavailableUsers(users) filters users that are busy 1`] = `Array []`;
+
+exports[`modules/platform/tgit/index filterUnavailableUsers(users) filters users that are busy 2`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/users/maria",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/users/john",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index filterUnavailableUsers(users) keeps users with failing requests 1`] = `Array []`;
+
+exports[`modules/platform/tgit/index filterUnavailableUsers(users) keeps users with failing requests 2`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/users/maria",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index filterUnavailableUsers(users) keeps users with missing availability 1`] = `Array []`;
+
+exports[`modules/platform/tgit/index filterUnavailableUsers(users) keeps users with missing availability 2`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/users/maria",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index findIssue() finds issue 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/issues?per_page=100&state=opened",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/issues/2",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index findIssue() returns null if no issue 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/issues?per_page=100&state=opened",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index findPr(branchName, prTitle, state) returns true if no title and all state 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_requests?per_page=100&scope=created_by_me",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index findPr(branchName, prTitle, state) returns true if not open 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_requests?per_page=100&scope=created_by_me",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index findPr(branchName, prTitle, state) returns true if open and with title 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_requests?per_page=100&scope=created_by_me",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index findPr(branchName, prTitle, state) returns true with draft prefix title 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_requests?per_page=100&scope=created_by_me",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index findPr(branchName, prTitle, state) returns true with title 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_requests?per_page=100&scope=created_by_me",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getBranchPr(branchName) should return null if no PR exists 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/merge_requests?per_page=100&scope=created_by_me",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getBranchPr(branchName) should return the PR object 1`] = `
+Object {
+  "body": undefined,
+  "displayNumber": "Merge Request #9991",
+  "hasAssignees": false,
+  "hasReviewers": false,
+  "labels": undefined,
+  "number": 9991,
+  "sha": undefined,
+  "sourceBranch": "some-branch",
+  "state": "open",
+  "targetBranch": "master",
+  "title": "some change",
+}
+`;
+
+exports[`modules/platform/tgit/index getBranchPr(branchName) should return the PR object 2`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/merge_requests?per_page=100&scope=created_by_me",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/merge_request/91",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getBranchPr(branchName) should strip deprecated draft prefix from title 1`] = `
+Object {
+  "body": undefined,
+  "displayNumber": "Merge Request #9991",
+  "hasAssignees": false,
+  "hasReviewers": false,
+  "labels": undefined,
+  "number": 9991,
+  "sha": undefined,
+  "sourceBranch": "some-branch",
+  "state": "open",
+  "targetBranch": "master",
+  "title": "WIP: some change",
+}
+`;
+
+exports[`modules/platform/tgit/index getBranchPr(branchName) should strip deprecated draft prefix from title 2`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/merge_requests?per_page=100&scope=created_by_me",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/merge_request/91",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getBranchPr(branchName) should strip draft prefix from title 1`] = `
+Object {
+  "body": undefined,
+  "displayNumber": "Merge Request #9991",
+  "hasAssignees": false,
+  "hasReviewers": false,
+  "labels": undefined,
+  "number": 9991,
+  "sha": undefined,
+  "sourceBranch": "some-branch",
+  "state": "open",
+  "targetBranch": "master",
+  "title": "Draft: some change",
+}
+`;
+
+exports[`modules/platform/tgit/index getBranchPr(branchName) should strip draft prefix from title 2`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/merge_requests?per_page=100&scope=created_by_me",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/merge_request/91",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getBranchStatus(branchName, ignoreTests) maps custom statuses to yellow 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/commits/0d9c7726c3d628b7e28af234595cfd20febdbf8e/statuses",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getBranchStatus(branchName, ignoreTests) returns failure if any mandatory jobs fails 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/commits/0d9c7726c3d628b7e28af234595cfd20febdbf8e/statuses",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getBranchStatus(branchName, ignoreTests) returns pending if no results 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/commits/0d9c7726c3d628b7e28af234595cfd20febdbf8e/statuses",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getBranchStatus(branchName, ignoreTests) returns success if all are success 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/commits/0d9c7726c3d628b7e28af234595cfd20febdbf8e/statuses",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getBranchStatus(branchName, ignoreTests) throws repository-changed 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getBranchStatusCheck returns null if no matching results 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/commits/0d9c7726c3d628b7e28af234595cfd20febdbf8e/statuses",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getBranchStatusCheck returns null if no results 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/commits/0d9c7726c3d628b7e28af234595cfd20febdbf8e/statuses",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getBranchStatusCheck returns status if name found 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/commits/0d9c7726c3d628b7e28af234595cfd20febdbf8e/statuses",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getJsonFile() returns file content 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/repository/blobs/HEAD?file_path=dir%2Ffile.json",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getJsonFile() returns file content from branch or tag 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/repository/blobs/dev?file_path=dir%2Ffile.json",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getJsonFile() returns file content from given repo 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/different%2Frepo/repository/blobs/HEAD?file_path=dir%2Ffile.json",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getJsonFile() returns file content in json5 format 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/repository/blobs/HEAD?file_path=dir%2Ffile.json5",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getJsonFile() throws on errors 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/repository/blobs/HEAD?file_path=dir%2Ffile.json",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getJsonFile() throws on malformed JSON 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/repository/blobs/HEAD?file_path=dir%2Ffile.json",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getPr(prNo) removes draft prefix from returned title 1`] = `
+Object {
+  "body": "a merge request",
+  "displayNumber": "Merge Request #12345",
+  "hasAssignees": false,
+  "hasReviewers": false,
+  "isDraft": true,
+  "labels": undefined,
+  "number": 12345,
+  "sha": undefined,
+  "sourceBranch": "some-branch",
+  "state": "merged",
+  "targetBranch": "master",
+  "title": "do something",
+}
+`;
+
+exports[`modules/platform/tgit/index getPr(prNo) removes draft prefix from returned title 2`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/1",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getPr(prNo) returns the PR 1`] = `
+Object {
+  "body": "a merge request",
+  "displayNumber": "Merge Request #12345",
+  "hasAssignees": false,
+  "hasReviewers": false,
+  "labels": undefined,
+  "number": 12345,
+  "sha": undefined,
+  "sourceBranch": "some-branch",
+  "state": "merged",
+  "targetBranch": "master",
+  "title": "do something",
+}
+`;
+
+exports[`modules/platform/tgit/index getPr(prNo) returns the PR 2`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/1",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getPr(prNo) returns the PR with nonexisting branch 1`] = `
+Object {
+  "body": "a merge request",
+  "displayNumber": "Merge Request #12345",
+  "hasAssignees": true,
+  "hasReviewers": false,
+  "labels": undefined,
+  "number": 12345,
+  "sha": undefined,
+  "sourceBranch": "some-branch",
+  "state": "open",
+  "targetBranch": "master",
+  "title": "do something",
+}
+`;
+
+exports[`modules/platform/tgit/index getPr(prNo) returns the PR with nonexisting branch 2`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/1",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getPr(prNo) returns the mergeable PR 1`] = `
+Object {
+  "body": "a merge request",
+  "displayNumber": "Merge Request #12345",
+  "hasAssignees": true,
+  "hasReviewers": false,
+  "labels": undefined,
+  "number": 12345,
+  "sha": undefined,
+  "sourceBranch": "some-branch",
+  "state": "open",
+  "targetBranch": "master",
+  "title": "do something",
+}
+`;
+
+exports[`modules/platform/tgit/index getPr(prNo) returns the mergeable PR 2`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/merge_request/1",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getRepoForceRebase should return false 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo%2Fproject",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getRepoForceRebase should return true 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo%2Fproject",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getRepos should return an array of repos 1`] = `
+Array [
+  "a/b",
+  "c/d",
+  "c/f",
+]
+`;
+
+exports[`modules/platform/tgit/index getRepos should return an array of repos 2`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/accessable?per_page=100",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index getRepos should throw an error if it receives an error 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/accessable?per_page=100",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index initPlatform() should accept custom endpoint 1`] = `
+Object {
+  "endpoint": "https://tgit.renovatebot.com/",
+  "gitAuthor": "Renovate Bot <a@b.com>",
+}
+`;
+
+exports[`modules/platform/tgit/index initPlatform() should accept custom endpoint 2`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "tgit.renovatebot.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://tgit.renovatebot.com/user",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index initPlatform() should default to git.code.tencent.com 1`] = `
+Object {
+  "endpoint": "https://git.code.tencent.com/api/v3/",
+  "gitAuthor": "Renovate Bot <a@b.com>",
+}
+`;
+
+exports[`modules/platform/tgit/index initPlatform() should default to git.code.tencent.com 2`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index initPlatform() should throw if auth fails 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index initRepo should escape all forward slashes in project names 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo%2Fproject",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index initRepo should fall back if http_url_to_repo is empty 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo%2Fproject",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index initRepo should throw an error if MRs are disabled 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index initRepo should throw an error if receiving an error 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index initRepo should throw an error if repository is archived 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index initRepo should throw an error if repository is empty 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index initRepo should throw if ssh_url_to_repo is not present but gitUrl is set to ssh 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo%2Fproject",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index initRepo should use ssh_url_to_repo if gitUrl is set to ssh 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo%2Fproject",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index initRepo should use ssh_url_to_repo if gitUrl is set to ssh 2`] = `
+Array [
+  Array [
+    Object {
+      "cloneSubmodules": undefined,
+      "defaultBranch": "master",
+      "ignorePrAuthor": undefined,
+      "mergeMethod": "merge",
+      "repository": "some%2Frepo%2Fproject",
+      "url": "ssh://git@git.code.tencent.com/some%2Frepo%2Fproject.git",
+    },
+  ],
+]
+`;
+
+exports[`modules/platform/tgit/index massageMarkdown(input) returns updated pr body 1`] = `
+"https://github.com/foo/bar/issues/5 plus also [a link](https://github.com/foo/bar/issues/5
+
+  Merge Requests are the best, here are some MRs.
+
+  ## Open
+
+These updates have all been created already. Click a checkbox below to force a retry/rebase of any.
+
+ - [ ] <!-- rebase-branch=renovate/major-got-packages -->[build(deps): update got packages (major)](!2433) (\`gh-got\`, \`gl-got\`, \`got\`)
+"
+`;
+
+exports[`modules/platform/tgit/index mergePr(pr) merges the PR 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "body": Object {},
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "2",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "PUT",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/1/merge",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index setBranchStatus sets branch status green 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "body": Object {
+      "context": "some-context",
+      "description": "some-description",
+      "state": "success",
+      "target_url": "some-url",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "101",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "POST",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/commit/0d9c7726c3d628b7e28af234595cfd20febdbf8e/statuses",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/commits/0d9c7726c3d628b7e28af234595cfd20febdbf8e/statuses",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index setBranchStatus sets branch status red 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "body": Object {
+      "context": "some-context",
+      "description": "some-description",
+      "state": "failure",
+      "target_url": "some-url",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "101",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "POST",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/commit/0d9c7726c3d628b7e28af234595cfd20febdbf8e/statuses",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/commits/0d9c7726c3d628b7e28af234595cfd20febdbf8e/statuses",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index setBranchStatus sets branch status yellow 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo",
+  },
+  Object {
+    "body": Object {
+      "context": "some-context",
+      "description": "some-description",
+      "state": "pending",
+      "target_url": "some-url",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "101",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "POST",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/commit/0d9c7726c3d628b7e28af234595cfd20febdbf8e/statuses",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/some%2Frepo/commits/0d9c7726c3d628b7e28af234595cfd20febdbf8e/statuses",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index updatePr(prNo, title, body) closes the PR 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_requests?per_page=100&scope=created_by_me",
+  },
+  Object {
+    "body": Object {
+      "description": "body",
+      "state_event": "close",
+      "title": "title",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "60",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "PUT",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/1",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index updatePr(prNo, title, body) retains draft status when draft uses current prefix 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_requests?per_page=100&scope=created_by_me",
+  },
+  Object {
+    "body": Object {
+      "description": "body",
+      "title": "title",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "38",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "PUT",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/1",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index updatePr(prNo, title, body) retains draft status when draft uses deprecated prefix 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_requests?per_page=100&scope=created_by_me",
+  },
+  Object {
+    "body": Object {
+      "description": "body",
+      "title": "title",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "38",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "PUT",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/1",
+  },
+]
+`;
+
+exports[`modules/platform/tgit/index updatePr(prNo, title, body) updates the PR 1`] = `
+Array [
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer some-token",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/user",
+  },
+  Object {
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "GET",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_requests?per_page=100&scope=created_by_me",
+  },
+  Object {
+    "body": Object {
+      "description": "body",
+      "title": "title",
+    },
+    "headers": Object {
+      "accept": "application/json",
+      "accept-encoding": "gzip, deflate, br",
+      "authorization": "Bearer 123test",
+      "content-length": "38",
+      "content-type": "application/json",
+      "host": "git.code.tencent.com",
+      "user-agent": "RenovateBot/0.0.0-semantic-release (https://github.com/renovatebot/renovate)",
+    },
+    "method": "PUT",
+    "url": "https://git.code.tencent.com/api/v3/projects/undefined/merge_request/1",
+  },
+]
+`;
