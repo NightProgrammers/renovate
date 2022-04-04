@@ -4,6 +4,7 @@ import * as bitbucketServer from './bitbucket-server';
 import * as gitea from './gitea';
 import * as github from './github';
 import * as gitlab from './gitlab';
+import * as tgit from './tgit';
 import type { Platform } from './types';
 
 const api = new Map<string, Platform>();
@@ -15,3 +16,4 @@ api.set('bitbucket-server', bitbucketServer);
 api.set('gitea', gitea);
 api.set('github', github);
 api.set('gitlab', gitlab);
+api.set('tgit', tgit);
