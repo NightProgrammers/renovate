@@ -104,7 +104,7 @@ export async function initPlatform({
       platformConfig.gitAuthor = `${user.name} <${user.email}>`;
     }
   } catch (err) {
-    logger.debug(
+    logger.error(
       { err },
       'Error authenticating with Tencent Git. Check that your token includes "api" permissions'
     );
@@ -186,7 +186,7 @@ function getRepoUrl(
   if (repoURL) {
     logger.debug({ url: repoURL }, `using http/https URL`);
     const repoU = URL.parse(`${repoURL}`);
-    repoU.auth = 'oauth2:' + opts.token;
+    repoU.auth = 'private:' + opts.token;
     return URL.format(repoU);
   }
 
