@@ -16,7 +16,9 @@ export function applyAuthorization(inOptions: GotOptions): GotOptions {
 
   options.headers ??= {};
   if (options.token) {
-    if (options.hostType === PlatformId.Gitea) {
+    if (options.hostType === PlatformId.TGit) {
+      options.headers['Private-token'] = options.token;
+    } else if (options.hostType === PlatformId.Gitea) {
       options.headers.authorization = `token ${options.token}`;
     } else if (
       options.hostType &&
