@@ -45,7 +45,7 @@ export interface RepoResponse {
   template_repository: boolean;
   ssh_url_to_repo: string;
   http_url_to_repo: string;
-  forked_from_project: boolean;
+  forked_from_project: string;
   merge_requests_enabled: boolean;
   path_with_namespace: string;
   merge_method?: MergeMethod;
