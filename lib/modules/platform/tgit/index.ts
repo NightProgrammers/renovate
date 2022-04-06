@@ -73,6 +73,7 @@ const defaults = {
 };
 
 const DRAFT_PREFIX = '[WIP] ';
+const NOT_FORKED_PATTERN = 'Forked Project not found';
 
 export async function initPlatform({
   endpoint,
@@ -260,7 +261,7 @@ export async function initRepo({
   }
   const repoConfig: RepoResult = {
     defaultBranch: config.defaultBranch,
-    isFork: !!res.body.forked_from_project,
+    isFork: res.body.forked_from_project !== NOT_FORKED_PATTERN,
   };
   return repoConfig;
 }
@@ -275,6 +276,8 @@ interface TGitBranchStatus {
   state: BranchState;
   name: string;
   allow_failure?: boolean;
+  target_url?: string;
+  updated_at?: string;
 }
 
 async function getStatus(
@@ -331,8 +334,15 @@ export async function getBranchStatus(
     // Return 'pending' if we have no status checks
     return BranchStatus.yellow;
   }
-  let status: BranchStatus = BranchStatus.green; // default to green
-  branchStatuses
+
+  return computeBranchStatus(branchStatuses);
+}
+
+function computeBranchStatus(branchStatuses: TGitBranchStatus[]): BranchStatus {
+  // default to green.
+  let status: BranchStatus = BranchStatus.green;
+
+  uniqTGitBranchStatus(branchStatuses)
     .filter((check) => !check.allow_failure)
     .forEach((check) => {
       if (status !== BranchStatus.red) {
@@ -352,11 +362,37 @@ export async function getBranchStatus(
         }
       }
     });
+
   return status;
 }
 
-// Pull Request
+function uniqTGitBranchStatus(
+  branchStatuses: TGitBranchStatus[]
+): TGitBranchStatus[] {
+  const ret: TGitBranchStatus[] = [];
 
+  // pipeline url => TGitBranchStatus for uniq with latest updated.
+  const pipelineUrls: { [key: string]: TGitBranchStatus } = {};
+  branchStatuses.forEach((b) => {
+    if (b.target_url?.length > 0 && b.updated_at) {
+      // override with new updated status
+      const existVal = pipelineUrls[b.target_url];
+      if (!existVal || b.updated_at > existVal.updated_at) {
+        pipelineUrls[b.target_url] = b;
+      }
+    } else {
+      ret.push(b);
+    }
+  });
+
+  Object.keys(pipelineUrls).forEach((u) => {
+    ret.push(pipelineUrls[u]);
+  });
+
+  return ret;
+}
+
+// Pull Request
 function massagePr(prToModify: Pr): Pr {
   const pr = prToModify;
   if (pr.title.startsWith(DRAFT_PREFIX)) {
@@ -437,7 +473,11 @@ async function tryPrAutomerge(
 
       await tgitApi.putJson(
         `projects/${config.repository}/merge_request/${prID}/merge`,
-        { body: {} }
+        {
+          body: {
+            merge_type: config.mergeMethod,
+          },
+        }
       );
     } catch (err) /* istanbul ignore next */ {
       logger.debug({ err }, 'Automerge on PR creation failed');
@@ -473,7 +513,7 @@ export async function createPr({
     }
   );
   const pr = res.body;
-  pr.number = pr.iid;
+  pr.number = pr.id;
   pr.sourceBranch = sourceBranch;
   pr.displayNumber = `Merge Request #${pr.iid}`;
   if (config.prList) {
@@ -493,7 +533,7 @@ export async function getPr(id: number): Promise<Pr> {
   const pr: Pr = {
     sourceBranch: mr.source_branch,
     targetBranch: mr.target_branch,
-    number: mr.iid,
+    number: mr.id,
     displayNumber: `Merge Request #${mr.iid}`,
     body: mr.description,
     state: mr.state === 'opened' ? PrState.Open : mr.state,
@@ -533,11 +573,14 @@ export async function updatePr({
   await tryPrAutomerge(id, platformOptions);
 }
 
-export async function mergePr({ id }: MergePRConfig): Promise<boolean> {
+export async function mergePr({
+  id,
+  strategy,
+}: MergePRConfig): Promise<boolean> {
   try {
     await tgitApi.putJson(
       `projects/${config.repository}/merge_request/${id}/merge`,
-      { body: {} }
+      { body: { merge_type: strategy } }
     );
     return true;
   } catch (err) /* istanbul ignore next */ {
@@ -735,7 +778,7 @@ export async function findIssue(title: string): Promise<Issue | null> {
     if (!issue) {
       return null;
     }
-    return await getIssue(issue.iid);
+    return await getIssue(issue.id);
   } catch (err) /* istanbul ignore next */ {
     logger.warn('Error finding issue');
     return null;
@@ -833,7 +876,7 @@ export async function addAssignees(
     });
   } catch (err) {
     logger.debug({ err }, 'addAssignees error');
-    logger.warn({ iid: id, assignees }, 'Failed to add assignees');
+    logger.warn({ id: id, assignees }, 'Failed to add assignees');
   }
 }
 
