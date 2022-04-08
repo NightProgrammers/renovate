@@ -5,6 +5,8 @@ export const configFileNames = [
   '.github/renovate.json5',
   '.gitlab/renovate.json',
   '.gitlab/renovate.json5',
+  '.ci/renovate.json',
+  '.ci/renovate.json5',
   '.renovaterc',
   '.renovaterc.json',
   'package.json',
