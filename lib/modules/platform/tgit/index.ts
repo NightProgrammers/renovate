@@ -4,6 +4,7 @@ import delay from 'delay';
 import JSON5 from 'json5';
 import pAll from 'p-all';
 import semver from 'semver';
+import type { MergeStrategy } from '../../../config/types';
 import { PlatformId } from '../../../constants';
 import {
   CONFIG_GIT_URL_UNAVAILABLE,
@@ -465,7 +466,11 @@ async function tryPrAutomerge(
         await delay(500 * attempt);
       }
 
-      await mergePr({ id: prID, strategy: config.mergeMethod });
+      await mergePr({
+        id: prID,
+        strategy:
+          config.mergeMethod === 'merge' ? 'merge-commit' : config.mergeMethod,
+      });
     } catch (err) /* istanbul ignore next */ {
       logger.debug({ err }, 'Automerge on PR creation failed');
     }
@@ -565,7 +570,7 @@ export async function mergePr({
   strategy,
 }: {
   id: number;
-  strategy: MergeMethod;
+  strategy: MergeStrategy;
 }): Promise<boolean> {
   try {
     await tgitApi.putJson(
