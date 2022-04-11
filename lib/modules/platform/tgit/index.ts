@@ -34,7 +34,6 @@ import type {
   FindPRConfig,
   GitUrlOption,
   Issue,
-  MergePRConfig,
   PlatformParams,
   PlatformPrOptions,
   PlatformResult,
@@ -456,29 +455,17 @@ async function tryPrAutomerge(
       const desiredStatus = 'can_be_merged';
       const retryTimes = 5;
 
-      // should using review api in TGit.
       // Check for correct merge request status before setting `merge_when_pipeline_succeeds` to  `true`.
       for (let attempt = 1; attempt <= retryTimes; attempt += 1) {
-        const { body } = await tgitApi.getJson<{
-          id: number;
-          merge_status: string;
-          // pipeline: string; // todo: review api to check.
-        }>(`projects/${config.repository}/merge_request/${prID}`);
-        // Only continue if the merge request can be merged and has a pipeline.
-        if (body.merge_status === desiredStatus) {
+        const mr = await getMR(config.repository, prID);
+        if (mr.merge_status === desiredStatus) {
           break;
         }
+
         await delay(500 * attempt);
       }
 
-      await tgitApi.putJson(
-        `projects/${config.repository}/merge_request/${prID}/merge`,
-        {
-          body: {
-            merge_type: config.mergeMethod,
-          },
-        }
-      );
+      await mergePr({ id: prID, strategy: config.mergeMethod });
     } catch (err) /* istanbul ignore next */ {
       logger.debug({ err }, 'Automerge on PR creation failed');
     }
@@ -576,7 +563,10 @@ export async function updatePr({
 export async function mergePr({
   id,
   strategy,
-}: MergePRConfig): Promise<boolean> {
+}: {
+  id: number;
+  strategy: MergeMethod;
+}): Promise<boolean> {
   try {
     await tgitApi.putJson(
       `projects/${config.repository}/merge_request/${id}/merge`,

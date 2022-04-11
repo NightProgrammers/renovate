@@ -25,9 +25,22 @@ export interface TGitMergeRequest {
   description: string;
   merge_status: string;
   assignee?: TGitUser;
-  reviewers?: TGitUser[]; // todo: should get with other api.
+  reviewers?: TGitUser[];
   labels: string[];
-  sha: string; // todo: should get with other api.
+  sha: string;
+}
+
+export interface TGitMergeRequestReview {
+  id: number;
+  iid: number;
+  state:
+    | 'empty'
+    | 'approving'
+    | 'approved'
+    | 'change_required'
+    | 'change_denied';
+  reviewers: TGitUser[];
+  labels: string[];
 }
 
 export interface UpdateMergeRequest {

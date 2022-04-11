@@ -357,6 +357,13 @@ These updates have all been created already. Click a checkbox below to force a r
           base: {
             sha: '1234',
           },
+        })
+        .get('/api/v3/projects/some%2Frepo/merge_request/91/review')
+        .reply(200, {
+          id: 91,
+          iid: 9991,
+          state: 'approved',
+          reviewers: [],
         });
       const pr = await tgit.getBranchPr('some-branch');
       expect(pr).toMatchSnapshot();
@@ -392,6 +399,13 @@ These updates have all been created already. Click a checkbox below to force a r
           base: {
             sha: '1234',
           },
+        })
+        .get('/api/v3/projects/some%2Frepo/merge_request/91/review')
+        .reply(200, {
+          id: 91,
+          iid: 9991,
+          state: 'approved',
+          reviewers: [],
         });
       const pr = await tgit.getBranchPr('some-branch');
       expect(pr).toMatchSnapshot();
@@ -427,6 +441,13 @@ These updates have all been created already. Click a checkbox below to force a r
           base: {
             sha: '1234',
           },
+        })
+        .get('/api/v3/projects/some%2Frepo/merge_request/91/review')
+        .reply(200, {
+          id: 91,
+          iid: 9991,
+          state: 'approved',
+          reviewers: [],
         });
       const pr = await tgit.getBranchPr('some-branch');
       expect(pr).toMatchSnapshot();
@@ -580,11 +601,13 @@ These updates have all been created already. Click a checkbox below to force a r
         .get('/api/v3/projects/undefined/issues?per_page=100&state=opened')
         .reply(200, [
           {
-            iid: 1,
+            id: 1,
+            iid: 111,
             title: 'title-1',
           },
           {
-            iid: 2,
+            id: 2,
+            iid: 2222,
             title: 'title-2',
           },
         ])
@@ -857,6 +880,8 @@ These updates have all been created already. Click a checkbox below to force a r
       const scope = httpMock
         .scope(tgitApiHost)
         .get('/api/v3/projects/undefined/merge_request/42')
+        .reply(200, {})
+        .get('/api/v3/projects/undefined/merge_request/42/review')
         .reply(200, { reviewers: existingReviewers })
         .get('/api/v3/users/someuser')
         .reply(200, [{ id: 10 }])
@@ -871,6 +896,8 @@ These updates have all been created already. Click a checkbox below to force a r
       const scope = httpMock
         .scope(tgitApiHost)
         .get('/api/v3/projects/undefined/merge_request/42')
+        .reply(200, {})
+        .get('/api/v3/projects/undefined/merge_request/42/review')
         .reply(200, { reviewers: existingReviewers })
         .get('/api/v3/users/someuser')
         .reply(200, { id: 10 })
@@ -889,6 +916,8 @@ These updates have all been created already. Click a checkbox below to force a r
       const scope = httpMock
         .scope(tgitApiHost)
         .get('/api/v3/projects/undefined/merge_request/42')
+        .reply(200, {})
+        .get('/api/v3/projects/undefined/merge_request/42/review')
         .reply(200, { reviewers: existingReviewers })
         .get('/api/v3/users/someuser')
         .reply(200, { id: 10 })
@@ -907,6 +936,8 @@ These updates have all been created already. Click a checkbox below to force a r
       const scope = httpMock
         .scope(tgitApiHost)
         .get('/api/v3/projects/undefined/merge_request/42')
+        .reply(200, {})
+        .get('/api/v3/projects/undefined/merge_request/42/review')
         .reply(200, { reviewers: existingReviewers })
         .get('/api/v3/users/someuser')
         .reply(200, [{ id: 1 }])
@@ -1183,7 +1214,9 @@ These updates have all been created already. Click a checkbox below to force a r
           title: 'some title',
         })
         .get('/api/v3/projects/undefined/merge_request/1')
-        .reply(200)
+        .reply(200, {})
+        .get('/api/v3/projects/undefined/merge_request/1/review')
+        .reply(200, {})
         .get('/api/v3/projects/undefined/merge_request/1')
         .reply(200, {
           merge_status: 'can_be_merged',
@@ -1193,6 +1226,10 @@ These updates have all been created already. Click a checkbox below to force a r
             ref: 'patch-28',
             status: 'success',
           },
+        })
+        .get('/api/v3/projects/undefined/merge_request/1/review')
+        .reply(200, {
+          state: 'approved',
         })
         .put('/api/v3/projects/undefined/merge_request/1/merge')
         .reply(200);
@@ -1281,7 +1318,9 @@ These updates have all been created already. Click a checkbox below to force a r
           title: 'some title',
         })
         .get('/api/v3/projects/undefined/merge_request/1')
-        .reply(200)
+        .reply(200, {})
+        .get('/api/v3/projects/undefined/merge_request/1/review')
+        .reply(200, {})
         .get('/api/v3/projects/undefined/merge_request/1')
         .reply(200, {
           merge_status: 'can_be_merged',
@@ -1291,6 +1330,13 @@ These updates have all been created already. Click a checkbox below to force a r
             ref: 'patch-28',
             status: 'success',
           },
+        })
+        .get('/api/v3/projects/undefined/merge_request/1/review')
+        .reply(200, {
+          id: 1,
+          iid: 12345,
+          state: 'approved',
+          reviewers: [],
         })
         .put('/api/v3/projects/undefined/merge_request/1/merge')
         .reply(200);
@@ -1317,7 +1363,9 @@ These updates have all been created already. Click a checkbox below to force a r
           title: 'some title',
         })
         .get('/api/v3/projects/undefined/merge_request/1')
-        .reply(200)
+        .reply(200, {})
+        .get('/api/v3/projects/undefined/merge_request/1/review')
+        .reply(200, {})
         .get('/api/v3/projects/undefined/merge_request/1')
         .reply(200, {
           merge_status: 'can_be_merged',
@@ -1327,6 +1375,13 @@ These updates have all been created already. Click a checkbox below to force a r
             ref: 'patch-28',
             status: 'success',
           },
+        })
+        .get('/api/v3/projects/undefined/merge_request/1/review')
+        .reply(200, {
+          id: 1,
+          iid: 12345,
+          state: 'approved',
+          reviewers: [],
         })
         .put('/api/v3/projects/undefined/merge_request/1/merge')
         .reply(200);
@@ -1353,7 +1408,9 @@ These updates have all been created already. Click a checkbox below to force a r
           title: 'some title',
         })
         .get('/api/v3/projects/undefined/merge_request/1')
-        .reply(200)
+        .reply(200, {})
+        .get('/api/v3/projects/undefined/merge_request/1/review')
+        .reply(200, {})
         .get('/api/v3/projects/undefined/merge_request/1')
         .reply(200, {
           merge_status: 'can_be_merged',
@@ -1363,6 +1420,13 @@ These updates have all been created already. Click a checkbox below to force a r
             ref: 'patch-28',
             status: 'success',
           },
+        })
+        .get('/api/v3/projects/undefined/merge_request/1/review')
+        .reply(200, {
+          id: 1,
+          iid: 12345,
+          state: 'approved',
+          reviewers: [],
         })
         .put('/api/v3/projects/undefined/merge_request/1/merge')
         .reply(200);
@@ -1395,6 +1459,13 @@ These updates have all been created already. Click a checkbox below to force a r
           source_branch: 'some-branch',
           target_branch: 'master',
           assignees: [],
+        })
+        .get('/api/v3/projects/undefined/merge_request/1/review')
+        .reply(200, {
+          id: 1,
+          iid: 9991,
+          state: 'approved',
+          reviewers: [],
         });
       const pr = await tgit.getPr(1);
       expect(pr).toMatchSnapshot();
@@ -1416,6 +1487,13 @@ These updates have all been created already. Click a checkbox below to force a r
           source_branch: 'some-branch',
           target_branch: 'master',
           assignees: [],
+        })
+        .get('/api/v3/projects/undefined/merge_request/1/review')
+        .reply(200, {
+          id: 1,
+          iid: 9991,
+          state: 'approved',
+          reviewers: [],
         });
       const pr = await tgit.getPr(1);
       expect(pr).toMatchSnapshot();
@@ -1424,19 +1502,28 @@ These updates have all been created already. Click a checkbox below to force a r
     });
     it('returns the mergeable PR', async () => {
       const scope = await initRepo();
-      scope.get('/api/v3/projects/some%2Frepo/merge_request/1').reply(200, {
-        id: 1,
-        iid: 12345,
-        title: 'do something',
-        description: 'a merge request',
-        state: PrState.Open,
-        diverged_commits_count: 5,
-        source_branch: 'some-branch',
-        target_branch: 'master',
-        assignee: {
+      scope
+        .get('/api/v3/projects/some%2Frepo/merge_request/1')
+        .reply(200, {
           id: 1,
-        },
-      });
+          iid: 12345,
+          title: 'do something',
+          description: 'a merge request',
+          state: PrState.Open,
+          diverged_commits_count: 5,
+          source_branch: 'some-branch',
+          target_branch: 'master',
+          assignee: {
+            id: 1,
+          },
+        })
+        .get('/api/v3/projects/some%2Frepo/merge_request/1/review')
+        .reply(200, {
+          id: 1,
+          iid: 9991,
+          state: 'approved',
+          reviewers: [],
+        });
       const pr = await tgit.getPr(1);
       expect(pr).toMatchSnapshot();
       expect(pr.hasAssignees).toBeTrue();
@@ -1459,6 +1546,13 @@ These updates have all been created already. Click a checkbox below to force a r
           assignee: {
             id: 1,
           },
+        })
+        .get('/api/v3/projects/undefined/merge_request/1/review')
+        .reply(200, {
+          id: 1,
+          iid: 9991,
+          state: 'approved',
+          reviewers: [],
         });
       const pr = await tgit.getPr(1);
       expect(pr).toMatchSnapshot();
@@ -1600,6 +1694,12 @@ These updates have all been created already. Click a checkbox below to force a r
           diverged_commits_count: 5,
           source_branch: 'some-branch',
           labels: ['foo', 'renovate', 'rebase'],
+        })
+        .get('/api/v3/projects/undefined/merge_request/42/review')
+        .reply(200, {
+          id: 42,
+          iid: 12345,
+          state: 'approved',
         })
         .put('/api/v3/projects/undefined/merge_request/42')
         .reply(200);
