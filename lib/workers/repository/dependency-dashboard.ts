@@ -2,8 +2,10 @@ import is from '@sindresorhus/is';
 import { nameFromLevel } from 'bunyan';
 import { GlobalConfig } from '../../config/global';
 import type { RenovateConfig } from '../../config/types';
+import { PlatformId } from '../../constants';
 import { getProblems, logger } from '../../logger';
 import { platform } from '../../modules/platform';
+import { getMR } from '../../modules/platform/tgit/merge-request';
 import { regEx } from '../../util/regex';
 import * as template from '../../util/template';
 import { BranchConfig, BranchResult } from '../types';
@@ -52,14 +54,28 @@ export async function readDashboardBody(config: RenovateConfig): Promise<void> {
   }
 }
 
-function getListItem(branch: BranchConfig, type: string): string {
+async function getListItem(
+  branch: BranchConfig,
+  type: string
+): Promise<string> {
   let item = ' - [ ] ';
   item += `<!-- ${type}-branch=${branch.branchName} -->`;
+
   if (branch.prNo) {
-    item += `[${branch.prTitle}](../pull/${branch.prNo})`;
+    if (branch.platform === PlatformId.TGit) {
+      // get merge request iid with api mr id.
+      const mr = await getMR(
+        encodeURIComponent(branch.repository),
+        branch.prNo
+      );
+      item += `[${branch.prTitle}](merge_requests/${mr.iid})`;
+    } else {
+      item += `[${branch.prTitle}](../pull/${branch.prNo})`;
+    }
   } else {
     item += branch.prTitle;
   }
+
   const uniquePackages = [
     ...new Set(branch.upgrades.map((upgrade) => '`' + upgrade.depName + '`')),
   ];
@@ -162,7 +178,7 @@ export async function ensureDependencyDashboard(
     issueBody += '## Pending Approval\n\n';
     issueBody += `These branches will be created by Renovate only once you click their checkbox below.\n\n`;
     for (const branch of pendingApprovals) {
-      issueBody += getListItem(branch, 'approve');
+      issueBody += await getListItem(branch, 'approve');
     }
     issueBody += '\n';
   }
@@ -174,7 +190,7 @@ export async function ensureDependencyDashboard(
     issueBody +=
       'These updates are awaiting their schedule. Click on a checkbox to get an update now.\n\n';
     for (const branch of awaitingSchedule) {
-      issueBody += getListItem(branch, 'unschedule');
+      issueBody += await getListItem(branch, 'unschedule');
     }
     issueBody += '\n';
   }
@@ -189,7 +205,7 @@ export async function ensureDependencyDashboard(
     issueBody +=
       'These updates are currently rate limited. Click on a checkbox below to force their creation now.\n\n';
     for (const branch of rateLimited) {
-      issueBody += getListItem(branch, 'unlimit');
+      issueBody += await getListItem(branch, 'unlimit');
     }
     issueBody += '\n';
   }
@@ -201,7 +217,7 @@ export async function ensureDependencyDashboard(
     issueBody +=
       'These updates encountered an error and will be retried. Click on a checkbox below to force a retry now.\n\n';
     for (const branch of errorList) {
-      issueBody += getListItem(branch, 'retry');
+      issueBody += await getListItem(branch, 'retry');
     }
     issueBody += '\n';
   }
@@ -213,7 +229,7 @@ export async function ensureDependencyDashboard(
     issueBody +=
       "These branches exist but PRs won't be created until you approve them by clicking on a checkbox.\n\n";
     for (const branch of awaitingPr) {
-      issueBody += getListItem(branch, 'approvePr');
+      issueBody += await getListItem(branch, 'approvePr');
     }
     issueBody += '\n';
   }
@@ -224,7 +240,7 @@ export async function ensureDependencyDashboard(
     issueBody += '## Edited/Blocked\n\n';
     issueBody += `These updates have been manually edited so Renovate will no longer make changes. To discard all commits and start over, click on a checkbox.\n\n`;
     for (const branch of prEdited) {
-      issueBody += getListItem(branch, 'rebase');
+      issueBody += await getListItem(branch, 'rebase');
     }
     issueBody += '\n';
   }
@@ -235,7 +251,7 @@ export async function ensureDependencyDashboard(
     issueBody += '## Pending Status Checks\n\n';
     issueBody += `These updates await pending status checks. To force their creation now, click the checkbox below.\n\n`;
     for (const branch of prPending) {
-      issueBody += getListItem(branch, 'approvePr');
+      issueBody += await getListItem(branch, 'approvePr');
     }
     issueBody += '\n';
   }
@@ -246,7 +262,7 @@ export async function ensureDependencyDashboard(
     issueBody += '## Pending Branch Automerge\n\n';
     issueBody += `These updates await pending status checks before automerging. Click on a checkbox to abort the branch automerge, and create a PR instead.\n\n`;
     for (const branch of prPendingBranchAutomerge) {
-      issueBody += getListItem(branch, 'approvePr');
+      issueBody += await getListItem(branch, 'approvePr');
     }
     issueBody += '\n';
   }
@@ -276,7 +292,7 @@ export async function ensureDependencyDashboard(
     issueBody += '## Other Branches\n\n';
     issueBody += `These updates are pending. To force PRs open, click the checkbox below.\n\n`;
     for (const branch of otherBranches) {
-      issueBody += getListItem(branch, 'other');
+      issueBody += await getListItem(branch, 'other');
     }
     issueBody += '\n';
   }
@@ -288,7 +304,7 @@ export async function ensureDependencyDashboard(
     issueBody +=
       'These updates have all been created already. Click a checkbox below to force a retry/rebase of any.\n\n';
     for (const branch of inProgress) {
-      issueBody += getListItem(branch, 'rebase');
+      issueBody += await getListItem(branch, 'rebase');
     }
     if (inProgress.length > 2) {
       issueBody += ' - [ ] ';
@@ -306,7 +322,7 @@ export async function ensureDependencyDashboard(
     issueBody +=
       'These are blocked by an existing closed PR and will not be recreated unless you click a checkbox below.\n\n';
     for (const branch of alreadyExisted) {
-      issueBody += getListItem(branch, 'recreate');
+      issueBody += await getListItem(branch, 'recreate');
     }
     issueBody += '\n';
   }
