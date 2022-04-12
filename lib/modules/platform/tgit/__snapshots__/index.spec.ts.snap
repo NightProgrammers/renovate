@@ -25,11 +25,13 @@ Array [
     "url": "https://git.code.tencent.com/api/v3/users/someuser",
   },
   Object {
-    "body": Object {},
+    "body": Object {
+      "assignee_id": 123,
+    },
     "headers": Object {
       "accept": "application/json",
       "accept-encoding": "gzip, deflate, br",
-      "content-length": "2",
+      "content-length": "19",
       "content-type": "application/json",
       "host": "git.code.tencent.com",
       "private-token": "123test",
@@ -77,11 +79,13 @@ Array [
     "url": "https://git.code.tencent.com/api/v3/users/someotheruser",
   },
   Object {
-    "body": Object {},
+    "body": Object {
+      "assignee_id": 123,
+    },
     "headers": Object {
       "accept": "application/json",
       "accept-encoding": "gzip, deflate, br",
-      "content-length": "2",
+      "content-length": "19",
       "content-type": "application/json",
       "host": "git.code.tencent.com",
       "private-token": "123test",
@@ -1933,12 +1937,13 @@ Array [
 exports[`modules/platform/tgit/index getBranchPr(branchName) should return the PR object 1`] = `
 Object {
   "body": undefined,
+  "cannotMergeReason": "mr.merge_status=\\"undefined\\"",
   "displayNumber": "Merge Request #9991",
   "hasAssignees": false,
   "hasReviewers": false,
   "labels": undefined,
   "number": 91,
-  "sha": "some-branch",
+  "sha": undefined,
   "sourceBranch": "some-branch",
   "state": "open",
   "targetBranch": "master",
@@ -2009,12 +2014,13 @@ Array [
 exports[`modules/platform/tgit/index getBranchPr(branchName) should strip deprecated draft prefix from title 1`] = `
 Object {
   "body": undefined,
+  "cannotMergeReason": "mr.merge_status=\\"undefined\\"",
   "displayNumber": "Merge Request #9991",
   "hasAssignees": false,
   "hasReviewers": false,
   "labels": undefined,
   "number": 91,
-  "sha": "some-branch",
+  "sha": undefined,
   "sourceBranch": "some-branch",
   "state": "open",
   "targetBranch": "master",
@@ -2085,12 +2091,13 @@ Array [
 exports[`modules/platform/tgit/index getBranchPr(branchName) should strip draft prefix from title 1`] = `
 Object {
   "body": undefined,
+  "cannotMergeReason": "mr.merge_status=\\"undefined\\"",
   "displayNumber": "Merge Request #9991",
   "hasAssignees": false,
   "hasReviewers": false,
   "labels": undefined,
   "number": 91,
-  "sha": "some-branch",
+  "sha": undefined,
   "sourceBranch": "some-branch",
   "state": "open",
   "targetBranch": "master",
@@ -2676,13 +2683,14 @@ Array [
 exports[`modules/platform/tgit/index getPr(prNo) removes draft prefix from returned title 1`] = `
 Object {
   "body": "a merge request",
+  "cannotMergeReason": "mr.merge_status=\\"cannot_be_merged\\"",
   "displayNumber": "Merge Request #12345",
   "hasAssignees": false,
   "hasReviewers": false,
   "isDraft": true,
   "labels": undefined,
   "number": 1,
-  "sha": "some-branch",
+  "sha": undefined,
   "sourceBranch": "some-branch",
   "state": "merged",
   "targetBranch": "master",
@@ -2731,12 +2739,13 @@ Array [
 exports[`modules/platform/tgit/index getPr(prNo) returns the PR 1`] = `
 Object {
   "body": "a merge request",
+  "cannotMergeReason": "mr.merge_status=\\"cannot_be_merged\\"",
   "displayNumber": "Merge Request #12345",
   "hasAssignees": false,
   "hasReviewers": false,
   "labels": undefined,
   "number": 1,
-  "sha": "some-branch",
+  "sha": undefined,
   "sourceBranch": "some-branch",
   "state": "merged",
   "targetBranch": "master",
@@ -2785,12 +2794,13 @@ Array [
 exports[`modules/platform/tgit/index getPr(prNo) returns the PR with nonexisting branch 1`] = `
 Object {
   "body": "a merge request",
+  "cannotMergeReason": "mr.merge_status=\\"cannot_be_merged\\"",
   "displayNumber": "Merge Request #12345",
   "hasAssignees": true,
   "hasReviewers": false,
   "labels": undefined,
   "number": 1,
-  "sha": "some-branch",
+  "sha": undefined,
   "sourceBranch": "some-branch",
   "state": "open",
   "targetBranch": "master",
@@ -2839,12 +2849,13 @@ Array [
 exports[`modules/platform/tgit/index getPr(prNo) returns the mergeable PR 1`] = `
 Object {
   "body": "a merge request",
+  "cannotMergeReason": "mr.merge_status=\\"undefined\\"",
   "displayNumber": "Merge Request #12345",
   "hasAssignees": true,
   "hasReviewers": false,
   "labels": undefined,
   "number": 1,
-  "sha": "some-branch",
+  "sha": undefined,
   "sourceBranch": "some-branch",
   "state": "open",
   "targetBranch": "master",

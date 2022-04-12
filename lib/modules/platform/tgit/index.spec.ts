@@ -828,7 +828,7 @@ These updates have all been created already. Click a checkbox below to force a r
       httpMock
         .scope(tgitApiHost)
         .get('/api/v3/users/someuser')
-        .reply(200, [{ id: 123 }])
+        .reply(200, { id: 123 })
         .put('/api/v3/projects/undefined/merge_request/42')
         .reply(200);
       await tgit.addAssignees(42, ['someuser']);
@@ -838,9 +838,9 @@ These updates have all been created already. Click a checkbox below to force a r
       httpMock
         .scope(tgitApiHost)
         .get('/api/v3/users/someuser')
-        .reply(200, [{ id: 123 }])
+        .reply(200, { id: 123 })
         .get('/api/v3/users/someotheruser')
-        .reply(200, [{ id: 124 }])
+        .reply(200, { id: 124 })
         .put('/api/v3/projects/undefined/merge_request/42')
         .reply(200);
       await tgit.addAssignees(42, ['someuser', 'someotheruser']);
@@ -884,7 +884,7 @@ These updates have all been created already. Click a checkbox below to force a r
         .get('/api/v3/projects/undefined/merge_request/42/review')
         .reply(200, { reviewers: existingReviewers })
         .get('/api/v3/users/someuser')
-        .reply(200, [{ id: 10 }])
+        .reply(200, { id: 10 })
         .get('/api/v3/users/someotheruser')
         .reply(404);
 
@@ -901,14 +901,12 @@ These updates have all been created already. Click a checkbox below to force a r
         .reply(200, { reviewers: existingReviewers })
         .get('/api/v3/users/someuser')
         .reply(200, { id: 10 })
-        .get('/api/v3/users/someotheruser')
-        .reply(200, { id: 15 })
-        .put('/api/v3/projects/undefined/merge_request/42', {
-          reviewer_ids: [1, 2, 10, 15],
+        .post('/api/v3/projects/undefined/merge_request/42/review/invite', {
+          reviewer_id: 10,
         })
-        .reply(404);
+        .reply(200, {});
 
-      await tgit.addReviewers(42, ['someuser', 'foo', 'someotheruser']);
+      await tgit.addReviewers(42, ['someuser', 'foo']);
       expect(scope.isDone()).toBeTrue();
     });
 
@@ -923,10 +921,14 @@ These updates have all been created already. Click a checkbox below to force a r
         .reply(200, { id: 10 })
         .get('/api/v3/users/someotheruser')
         .reply(200, { id: 15 })
-        .put('/api/v3/projects/undefined/merge_request/42', {
-          reviewer_ids: [1, 2, 10, 15],
+        .post('/api/v3/projects/undefined/merge_request/42/review/invite', {
+          reviewer_id: 10,
         })
-        .reply(200);
+        .reply(200, {})
+        .post('/api/v3/projects/undefined/merge_request/42/review/invite', {
+          reviewer_id: 15,
+        })
+        .reply(200, {});
 
       await tgit.addReviewers(42, ['someuser', 'foo', 'someotheruser']);
       expect(scope.isDone()).toBeTrue();
@@ -940,11 +942,17 @@ These updates have all been created already. Click a checkbox below to force a r
         .get('/api/v3/projects/undefined/merge_request/42/review')
         .reply(200, { reviewers: existingReviewers })
         .get('/api/v3/users/someuser')
-        .reply(200, [{ id: 1 }])
+        .reply(200, { id: 1 })
         .get('/api/v3/users/someotheruser')
-        .reply(200, [{ id: 2 }])
-        .put('/api/v3/projects/undefined/merge_request/42')
-        .reply(200);
+        .reply(200, { id: 2 })
+        .post('/api/v3/projects/undefined/merge_request/42/review/invite', {
+          reviewer_id: 1,
+        })
+        .reply(200, {})
+        .post('/api/v3/projects/undefined/merge_request/42/review/invite', {
+          reviewer_id: 2,
+        })
+        .reply(200, {});
 
       await tgit.addReviewers(42, ['someuser', 'foo', 'someotheruser']);
       expect(scope.isDone()).toBeTrue();

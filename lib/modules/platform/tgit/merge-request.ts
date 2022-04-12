@@ -1,10 +1,6 @@
 import { logger } from '../../../logger';
 import { tgitApi } from './http';
-import type {
-  TGitMergeRequest,
-  TGitMergeRequestReview,
-  UpdateMergeRequest,
-} from './types';
+import type { TGitMergeRequest, TGitMergeRequestReview } from './types';
 
 export async function getMR(
   repository: string,
@@ -16,7 +12,7 @@ export async function getMR(
   const mr = (
     await tgitApi.getJson<TGitMergeRequest & { source_commit: string }>(url)
   ).body;
-  mr.sha = mr.source_branch;
+  mr.sha = mr.source_commit;
 
   const cr = await getMergeRequstReview(repository, id);
   mr.reviewers = cr.reviewers;
@@ -27,17 +23,21 @@ export async function getMR(
   return mr;
 }
 
-export async function updateMR(
+export async function updateMergeRequstReviewers(
   repository: string,
   id: number,
-  data: UpdateMergeRequest
+  newReviewIDs: number[]
 ): Promise<void> {
-  logger.debug(`updateMR(${id})`);
+  logger.debug(`update mr reviews(${id})`);
 
-  const url = `projects/${repository}/merge_request/${id}`;
-  await tgitApi.putJson(url, {
-    body: data,
-  });
+  const url = `projects/${repository}/merge_request/${id}/review/invite`;
+  await Promise.all(
+    newReviewIDs.map(async (reviewID) => {
+      await tgitApi.postJson<TGitMergeRequestReview>(url, {
+        body: { reviewer_id: reviewID },
+      });
+    })
+  );
 }
 
 async function getMergeRequstReview(

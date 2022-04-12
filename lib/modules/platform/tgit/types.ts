@@ -22,6 +22,9 @@ export interface TGitMergeRequest {
   state: string;
   source_branch: string;
   target_branch: string;
+  base_commit: string;
+  source_commit: string;
+  target_commit: string;
   description: string;
   merge_status: string;
   assignee?: TGitUser;

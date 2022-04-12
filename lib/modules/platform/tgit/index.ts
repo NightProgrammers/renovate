@@ -45,7 +45,7 @@ import type {
 } from '../types';
 import { smartTruncate } from '../utils/pr-body';
 import { getUserID, isUserActive, tgitApi } from './http';
-import { getMR, updateMR } from './merge-request';
+import { getMR, updateMergeRequstReviewers } from './merge-request';
 import type {
   MergeMethod,
   RepoResponse,
@@ -528,6 +528,10 @@ export async function getPr(id: number): Promise<Pr> {
     number: mr.id,
     displayNumber: `Merge Request #${mr.iid}`,
     body: mr.description,
+    cannotMergeReason:
+      mr.merge_status === 'can_be_merged'
+        ? undefined
+        : `mr.merge_status="${mr.merge_status}"`,
     state: mr.state === 'opened' ? PrState.Open : mr.state,
     hasAssignees: !!mr.assignee?.id,
     hasReviewers: !!mr.reviewers?.length,
@@ -891,7 +895,6 @@ export async function addReviewers(
 
   mr.reviewers = mr.reviewers ?? [];
   const existingReviewers = mr.reviewers.map((r) => r.username);
-  const existingReviewerIDs = mr.reviewers.map((r) => r.id);
 
   // Figure out which reviewers (of the ones we want to add) are not already on the MR as a reviewer
   const newReviewers = reviewers.filter((r) => !existingReviewers.includes(r));
@@ -899,19 +902,14 @@ export async function addReviewers(
   // Gather the IDs for all the reviewers we want to add
   let newReviewerIDs: number[];
   try {
-    newReviewerIDs = await pAll(
-      newReviewers.map((r) => () => getUserID(r)),
-      { concurrency: 5 }
-    );
+    newReviewerIDs = await Promise.all<number>(newReviewers.map(getUserID));
   } catch (err) {
     logger.warn({ err }, 'Failed to get IDs of the new reviewers');
     return;
   }
 
   try {
-    await updateMR(config.repository, id, {
-      reviewer_ids: [...existingReviewerIDs, ...newReviewerIDs],
-    });
+    await updateMergeRequstReviewers(config.repository, id, newReviewerIDs);
   } catch (err) {
     logger.warn({ err }, 'Failed to add reviewers');
   }
