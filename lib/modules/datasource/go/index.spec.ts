@@ -10,6 +10,7 @@ const getReleasesDirectMock = jest.fn();
 
 const getDigestGithubMock = jest.fn();
 const getDigestGitlabMock = jest.fn();
+const getDigestTgitMock = jest.fn();
 const getDigestBitbucketMock = jest.fn();
 jest.mock('./releases-direct', () => {
   return {
@@ -17,6 +18,7 @@ jest.mock('./releases-direct', () => {
       return {
         github: { getDigest: () => getDigestGithubMock() },
         gitlab: { getDigest: () => getDigestGitlabMock() },
+        tgit: { getDigest: () => getDigestTgitMock() },
         bitbucket: { getDigest: () => getDigestBitbucketMock() },
         getReleases: () => getReleasesDirectMock(),
       };
@@ -127,7 +129,15 @@ describe('modules/datasource/go/index', () => {
       );
       expect(res).toBe('abcdefabcdefabcdefabcdef');
     });
-
+    it('supports tgit digest', async () => {
+      hostRules.hostType.mockReturnValueOnce('tgit-tags');
+      getDigestTgitMock.mockResolvedValue('abcdefabcdefabcdefabcdef');
+      const res = await datasource.getDigest(
+        { packageName: 'git.code.tencent.com/group/subgroup' },
+        null
+      );
+      expect(res).toBe('abcdefabcdefabcdefabcdef');
+    });
     it('supports gitlab digest with a specific branch', async () => {
       const branch = 'some-branch';
       httpMock

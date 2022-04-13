@@ -8,6 +8,7 @@ import { trimLeadingSlash, trimTrailingSlash } from '../../../util/url';
 import { BitBucketTagsDatasource } from '../bitbucket-tags';
 import { GithubTagsDatasource } from '../github-tags';
 import { GitlabTagsDatasource } from '../gitlab-tags';
+import { TGitTagsDatasource } from '../tgit-tags';
 import type { DataSource } from './types';
 
 // TODO: figure out class hierarchy (#10532)
@@ -60,6 +61,11 @@ export class BaseGoDatasource {
   private static async goGetDatasource(
     goModule: string
   ): Promise<DataSource | null> {
+    const tgitSource = BaseGoDatasource.goGetTGitDatasource(goModule);
+    if (tgitSource) {
+      return tgitSource;
+    }
+
     const pkgUrl = `https://${goModule}?go-get=1`;
     const res = (await BaseGoDatasource.http.get(pkgUrl)).body;
     const sourceMatch = regEx(
@@ -166,5 +172,24 @@ export class BaseGoDatasource {
       logger.trace({ goModule }, 'No go-source or go-import header found');
     }
     return null;
+  }
+
+  private static goGetTGitDatasource(goModule: string): DataSource | null {
+    const split = goModule.split('/');
+    const registryUrl = `https://${split[0]}`;
+
+    const hostType = hostRules.hostType({ url: registryUrl });
+    if (
+      !hostType ||
+      ![TGitTagsDatasource.id, PlatformId.TGit].includes(hostType)
+    ) {
+      return null;
+    }
+
+    return {
+      datasource: TGitTagsDatasource.id,
+      packageName: split.slice(1).join('/'),
+      registryUrl: registryUrl,
+    };
   }
 }

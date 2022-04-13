@@ -40,6 +40,7 @@ import { SbtPackageDatasource } from './sbt-package';
 import { SbtPluginDatasource } from './sbt-plugin';
 import { TerraformModuleDatasource } from './terraform-module';
 import { TerraformProviderDatasource } from './terraform-provider';
+import { TGitTagsDatasource } from './tgit-tags';
 import type { DatasourceApi } from './types';
 
 const api = new Map<string, DatasourceApi>();
@@ -66,6 +67,7 @@ api.set(GithubTagsDatasource.id, new GithubTagsDatasource());
 api.set(GitlabPackagesDatasource.id, new GitlabPackagesDatasource());
 api.set(GitlabReleasesDatasource.id, new GitlabReleasesDatasource());
 api.set(GitlabTagsDatasource.id, new GitlabTagsDatasource());
+api.set(TGitTagsDatasource.id, new TGitTagsDatasource());
 api.set(GoDatasource.id, new GoDatasource());
 api.set(GolangVersionDatasource.id, new GolangVersionDatasource());
 api.set(GradleVersionDatasource.id, new GradleVersionDatasource());

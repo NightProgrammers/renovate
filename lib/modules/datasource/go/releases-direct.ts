@@ -5,6 +5,7 @@ import { BitBucketTagsDatasource } from '../bitbucket-tags';
 import { Datasource } from '../datasource';
 import { GithubTagsDatasource } from '../github-tags';
 import { GitlabTagsDatasource } from '../gitlab-tags';
+import { TGitTagsDatasource } from '../tgit-tags';
 import type { DatasourceApi, GetReleasesConfig, ReleaseResult } from '../types';
 import { BaseGoDatasource } from './base';
 import { getSourceUrl } from './common';
@@ -14,12 +15,14 @@ export class GoDirectDatasource extends Datasource {
 
   github: GithubTagsDatasource;
   gitlab: DatasourceApi;
+  tgit: DatasourceApi;
   bitbucket: DatasourceApi;
 
   constructor() {
     super(GoDirectDatasource.id);
     this.github = new GithubTagsDatasource();
     this.gitlab = new GitlabTagsDatasource();
+    this.tgit = new TGitTagsDatasource();
     this.bitbucket = new BitBucketTagsDatasource();
   }
 
@@ -61,6 +64,10 @@ export class GoDirectDatasource extends Datasource {
       }
       case GitlabTagsDatasource.id: {
         res = await this.gitlab.getReleases(source);
+        break;
+      }
+      case TGitTagsDatasource.id: {
+        res = await this.tgit.getReleases(source);
         break;
       }
       case BitBucketTagsDatasource.id: {

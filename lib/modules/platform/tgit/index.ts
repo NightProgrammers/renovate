@@ -2,7 +2,6 @@ import URL from 'url';
 import is from '@sindresorhus/is';
 import delay from 'delay';
 import JSON5 from 'json5';
-import pAll from 'p-all';
 import semver from 'semver';
 import type { MergeStrategy } from '../../../config/types';
 import { PlatformId } from '../../../constants';

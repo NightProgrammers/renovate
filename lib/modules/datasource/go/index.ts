@@ -6,6 +6,7 @@ import { BitBucketTagsDatasource } from '../bitbucket-tags';
 import { Datasource } from '../datasource';
 import { GithubTagsDatasource } from '../github-tags';
 import { GitlabTagsDatasource } from '../gitlab-tags';
+import { TGitTagsDatasource } from '../tgit-tags';
 import type { DigestConfig, GetReleasesConfig, ReleaseResult } from '../types';
 import { BaseGoDatasource } from './base';
 import { GoDirectDatasource } from './releases-direct';
@@ -68,6 +69,9 @@ export class GoDatasource extends Datasource {
       }
       case GitlabTagsDatasource.id: {
         return this.direct.gitlab.getDigest(source, tag);
+      }
+      case TGitTagsDatasource.id: {
+        return this.direct.tgit.getDigest(source, tag);
       }
       /* istanbul ignore next: can never happen, makes lint happy */
       default: {

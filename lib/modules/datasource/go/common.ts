@@ -3,6 +3,8 @@ import { getSourceUrl as githubSourceUrl } from '../github-releases/common';
 import { GithubTagsDatasource } from '../github-tags';
 import { GitlabTagsDatasource } from '../gitlab-tags';
 import { getSourceUrl as gitlabSourceUrl } from '../gitlab-tags/util';
+import { TGitTagsDatasource } from '../tgit-tags';
+import { tgitSourceUrl } from '../tgit-tags/util';
 
 import type { DataSource } from './types';
 
@@ -22,6 +24,10 @@ export function getSourceUrl(dataSource?: DataSource): string | undefined {
 
     if (datasource === GitlabTagsDatasource.id) {
       return gitlabSourceUrl(packageName, registryUrl);
+    }
+
+    if (datasource === TGitTagsDatasource.id) {
+      return tgitSourceUrl(packageName, registryUrl);
     }
 
     if (datasource === BitBucketTagsDatasource.id) {
